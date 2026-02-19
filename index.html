@@ -37,54 +37,86 @@
 
 <body class="bg-base-200 ">
 
-    <main class="min-h-screen max-w-lg border-2 mx-auto">
+    <main class="min-h-screen max-w-lg mx-auto">
         <div class="flex justify-center gap-5 pt-[100px]">
             <button class="btn btn-secondary" onclick="my_modal_1.showModal()">By Average Method</button>
             <button class="btn btn-success" onclick="my_modal_2.showModal()"> By Trigonometric Method</button>
         </div>
 
-        <!-- By Average Method -->
+
         <div class="">
+            <!-- By Average Method -->
             <dialog id="my_modal_1" class="modal">
                 <div class="modal-box">
                     <form method="dialog">
+                        <h3 class="text-lg font-bold text-red-600">গড় পদ্ধতিতে জমি পরিমাপ করুন</h3>
                         <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                     </form>
-                    <section>
+                    <section class="mt-6">
                         <div class="grid grid-cols-2 gap-5 ">
                             <fieldset class="fieldset">
                                 <legend class="fieldset-legend">Enter East Value</legend>
-                                <input id="east" type="number" class="input" placeholder="Type here" />
+                                <input id="east" type="number" class="input" placeholder="পূর্ব দিকের দৈর্ঘ্য লিখুন" />
                             </fieldset>
                             <fieldset class="fieldset">
                                 <legend class="fieldset-legend">Enter West Value</legend>
-                                <input id="west" type="number" class="input" placeholder="Type here" />
+                                <input id="west" type="number" class="input" placeholder="পশ্চিম দিকের দৈর্ঘ্য লিখুন" />
                             </fieldset>
                             <fieldset class="fieldset">
                                 <legend class="fieldset-legend">Enter North Value</legend>
-                                <input id="north" type="number" class="input" placeholder="Type here" />
+                                <input id="north" type="number" class="input" placeholder="উত্তর দিকের দৈর্ঘ্য লিখুন" />
                             </fieldset>
                             <fieldset class="fieldset">
                                 <legend class="fieldset-legend">Enter South Value</legend>
-                                <input id="south" type="number" class="input" placeholder="Type here" />
+                                <input id="south" type="number" class="input" placeholder="দক্ষিণ দিকের দৈর্ঘ্য লিখুন"
+                                    required />
                             </fieldset>
                         </div>
-                        <button id="calculate-btn-1" class="btn btn-soft btn-primary w-full mt-5">Calculate</button>
+                        <button id="calculate-btn-1" class="btn btn-soft btn-primary w-full mt-5">হিসাব করুন</button>
                     </section>
                     <section id="result-container" class="text-center mt-5 hidden">
                         <h1 class="text-red-600 text-2xl mb-3"> Your Result is :</h1>
-                        <p id="result" class="text-pink-700 border-2 rounded-xl border-fuchsia-500 p-3 w-fit mx-auto "></p>
+                        <p id="result" class="text-pink-700 border-2 rounded-xl border-fuchsia-500 p-3 w-fit mx-auto ">
+                        </p>
                     </section>
                 </div>
             </dialog>
 
+
+            <!-- By Trigonometric Method -->
             <dialog id="my_modal_2" class="modal">
                 <div class="modal-box">
                     <form method="dialog">
+                        <h3 class="text-lg font-bold text-red-600">ত্রিকোণামিতি পদ্ধতিতে জমি পরিমাপ করুন</h3>
                         <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                     </form>
-                    <h3 class="text-lg font-bold">Welcome!</h3>
-                    <p class="py-4">Press ESC key or click on ✕ button to close</p>
+                    <section class="mt-6">
+                        <div class="grid grid-cols-2 gap-5 ">
+                            <fieldset class="fieldset">
+                                <legend class="fieldset-legend">Enter East Value</legend>
+                                <input id="east1" type="number" class="input" placeholder="পূর্ব দিকের দৈর্ঘ্য লিখুন" />
+                            </fieldset>
+                            <fieldset class="fieldset">
+                                <legend class="fieldset-legend">Enter West Value</legend>
+                                <input id="west1" type="number" class="input" placeholder="পশ্চিম দিকের দৈর্ঘ্য লিখুন" />
+                            </fieldset>
+                            <fieldset class="fieldset">
+                                <legend class="fieldset-legend">Enter North Value</legend>
+                                <input id="north1" type="number" class="input" placeholder="উত্তর দিকের দৈর্ঘ্য লিখুন" />
+                            </fieldset>
+                            <fieldset class="fieldset">
+                                <legend class="fieldset-legend">Enter South Value</legend>
+                                <input id="south1" type="number" class="input" placeholder="দক্ষিণ দিকের দৈর্ঘ্য লিখুন"
+                                    required />
+                            </fieldset>
+                        </div>
+                        <button id="calculate-btn-2" class="btn btn-soft btn-primary w-full mt-5">হিসাব করুন</button>
+                    </section>
+                    <section id="result-container1" class="text-center mt-5 hidden">
+                        <h1 class="text-red-600 text-2xl mb-3"> Your Result is :</h1>
+                        <p id="result1" class="text-pink-700 border-2 rounded-xl border-fuchsia-500 p-3 w-fit mx-auto ">
+                        </p>
+                    </section>
                 </div>
             </dialog>
         </div>
@@ -94,6 +126,7 @@
 
     <script src="./function.js"></script>
     <script src="./index.js"></script>
+    <script src="./method2.js"></script>
 </body>
 
 </html>
