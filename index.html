@@ -38,6 +38,7 @@
         #calculate-btn-1,
         #calculate-btn-2,
         #calculate-btn-3,
+        #result2, 
         form h3,
         fieldset input {
             font-family: "Hind Siliguri", sans-serif;
@@ -47,8 +48,8 @@
 
 <body class="bg-base-200 ">
 
-    <main class="min-h-screen max-w-lg mx-auto">
-        <div class="flex justify-center gap-5 pt-[100px]">
+    <main class="min-h-screen max-w-lg mx-auto ">
+        <div class=" grid grid-cols-2 px-3 gap-5 pt-[100px]">
             <button class="btn btn-secondary" onclick="my_modal_1.showModal()">By Average Method</button>
             <button class="btn btn-success text-white" onclick="my_modal_2.showModal()"> By Trigonometric
                 Method</button>
@@ -145,18 +146,18 @@
                     </form>
 
                     <section class="mt-6">
-                        <div class="grid grid-cols-3 gap-5 ">
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-5 ">
                             <fieldset class="fieldset">
                                 <legend class="fieldset-legend">Enter First Value</legend>
-                                <input id="firstValue" type="number" class="input" placeholder="প্রথম মান লিখুন" />
+                                <input id="firstValue" type="number" class="input w-full" placeholder="প্রথম মান লিখুন" />
                             </fieldset>
                             <fieldset class="fieldset">
                                 <legend class="fieldset-legend">Enter Second Value</legend>
-                                <input id="secondValue" type="number" class="input" placeholder="দ্বিতীয় মান লিখুন" />
+                                <input id="secondValue" type="number" class="input w-full" placeholder="দ্বিতীয় মান লিখুন" />
                             </fieldset>
                             <fieldset class="fieldset">
                                 <legend class="fieldset-legend">Enter Third Value</legend>
-                                <input id="thirdValue" type="number" class="input" placeholder="তৃতীয় মান লিখুন" />
+                                <input id="thirdValue" type="number" class="input w-full" placeholder="তৃতীয় মান লিখুন" />
                             </fieldset>
 
                         </div>
