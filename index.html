@@ -27,7 +27,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Outfit:wght@100..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Outfit:wght@100..900&family=Tiro+Bangla:ital@0;1&display=swap"
         rel="stylesheet">
 
     <style>
@@ -38,18 +38,23 @@
         #calculate-btn-1,
         #calculate-btn-2,
         #calculate-btn-3,
-        #result2, 
+        #result2,
         form h3,
-        fieldset input {
+        fieldset input,
+        .font {
             font-family: "Hind Siliguri", sans-serif;
+        }
+
+        .font-2 {
+            font-family: "Tiro Bangla", serif;
         }
     </style>
 </head>
 
-<body class="bg-base-200 ">
+<body class=" bg-base-200 min-h-screen py-3">
 
-    <main class="min-h-screen max-w-lg mx-auto ">
-        <div class=" grid grid-cols-2 px-3 gap-5 pt-[100px]">
+    <main class=" max-w-lg mx-auto ">
+        <div class=" grid grid-cols-2 px-3 gap-5 pt-[30px]">
             <button class="btn btn-secondary" onclick="my_modal_1.showModal()">By Average Method</button>
             <button class="btn btn-success text-white" onclick="my_modal_2.showModal()"> By Trigonometric
                 Method</button>
@@ -69,20 +74,23 @@
                         <div class="grid grid-cols-2 gap-5 ">
                             <fieldset class="fieldset">
                                 <legend class="fieldset-legend">Enter East Value</legend>
-                                <input id="east" type="number" class="input" placeholder="পূর্ব দিকের দৈর্ঘ্য লিখুন" />
+                                <input id="east" type="number" class="input"
+                                    placeholder="পূর্ব দিকের দৈর্ঘ্য লিখুন (ফিট)" />
                             </fieldset>
                             <fieldset class="fieldset">
                                 <legend class="fieldset-legend">Enter West Value</legend>
-                                <input id="west" type="number" class="input" placeholder="পশ্চিম দিকের দৈর্ঘ্য লিখুন" />
+                                <input id="west" type="number" class="input"
+                                    placeholder="পশ্চিম দিকের দৈর্ঘ্য লিখুন (ফিট)" />
                             </fieldset>
                             <fieldset class="fieldset">
                                 <legend class="fieldset-legend">Enter North Value</legend>
-                                <input id="north" type="number" class="input" placeholder="উত্তর দিকের দৈর্ঘ্য লিখুন" />
+                                <input id="north" type="number" class="input"
+                                    placeholder="উত্তর দিকের দৈর্ঘ্য লিখুন (ফিট)" />
                             </fieldset>
                             <fieldset class="fieldset">
                                 <legend class="fieldset-legend">Enter South Value</legend>
-                                <input id="south" type="number" class="input" placeholder="দক্ষিণ দিকের দৈর্ঘ্য লিখুন"
-                                    required />
+                                <input id="south" type="number" class="input"
+                                    placeholder="দক্ষিণ দিকের দৈর্ঘ্য লিখুন (ফিট)" required />
                             </fieldset>
                         </div>
                         <button id="calculate-btn-1"
@@ -108,22 +116,23 @@
                         <div class="grid grid-cols-2 gap-5 ">
                             <fieldset class="fieldset">
                                 <legend class="fieldset-legend">Enter East Value</legend>
-                                <input id="east1" type="number" class="input" placeholder="পূর্ব দিকের দৈর্ঘ্য লিখুন" />
+                                <input id="east1" type="number" class="input"
+                                    placeholder="পূর্ব দিকের দৈর্ঘ্য লিখুন (ফিট)" />
                             </fieldset>
                             <fieldset class="fieldset">
                                 <legend class="fieldset-legend">Enter West Value</legend>
                                 <input id="west1" type="number" class="input"
-                                    placeholder="পশ্চিম দিকের দৈর্ঘ্য লিখুন" />
+                                    placeholder="পশ্চিম দিকের দৈর্ঘ্য লিখুন (ফিট)" />
                             </fieldset>
                             <fieldset class="fieldset">
                                 <legend class="fieldset-legend">Enter North Value</legend>
                                 <input id="north1" type="number" class="input"
-                                    placeholder="উত্তর দিকের দৈর্ঘ্য লিখুন" />
+                                    placeholder="উত্তর দিকের দৈর্ঘ্য লিখুন (ফিট)" />
                             </fieldset>
                             <fieldset class="fieldset">
                                 <legend class="fieldset-legend">Enter South Value</legend>
-                                <input id="south1" type="number" class="input" placeholder="দক্ষিণ দিকের দৈর্ঘ্য লিখুন"
-                                    required />
+                                <input id="south1" type="number" class="input"
+                                    placeholder="দক্ষিণ দিকের দৈর্ঘ্য লিখুন (ফিট)" required />
                             </fieldset>
                         </div>
                         <button id="calculate-btn-2" class="btn btn-soft btn-primary w-full mt-5">হিসাব করুন</button>
@@ -149,15 +158,18 @@
                         <div class="grid grid-cols-1 sm:grid-cols-3 gap-5 ">
                             <fieldset class="fieldset">
                                 <legend class="fieldset-legend">Enter First Value</legend>
-                                <input id="firstValue" type="number" class="input w-full" placeholder="প্রথম মান লিখুন" />
+                                <input id="firstValue" type="number" class="input w-full"
+                                    placeholder="প্রথম মান লিখুন (ফিট)" />
                             </fieldset>
                             <fieldset class="fieldset">
                                 <legend class="fieldset-legend">Enter Second Value</legend>
-                                <input id="secondValue" type="number" class="input w-full" placeholder="দ্বিতীয় মান লিখুন" />
+                                <input id="secondValue" type="number" class="input w-full"
+                                    placeholder="দ্বিতীয় মান লিখুন (ফিট)" />
                             </fieldset>
                             <fieldset class="fieldset">
                                 <legend class="fieldset-legend">Enter Third Value</legend>
-                                <input id="thirdValue" type="number" class="input w-full" placeholder="তৃতীয় মান লিখুন" />
+                                <input id="thirdValue" type="number" class="input w-full"
+                                    placeholder="তৃতীয় মান লিখুন (ফিট)" />
                             </fieldset>
 
                         </div>
@@ -171,6 +183,78 @@
                 </div>
             </dialog>
         </div>
+
+        <!-- Description -->
+        <section class=" px-3 mt-10">
+            <h2 class="text-2xl font-bold text-center mb-5 font">জমি পরিমাপের পদ্ধতি</h2>
+            <p class="text-justify text-gray-700 font">
+                জমি পরিমাপের বিভিন্ন পদ্ধতি রয়েছে, যার মধ্যে গড় পদ্ধতি, ত্রিকোণামিতি পদ্ধতি এবং ত্রিভূজ ক্ষেত্রফল
+                নির্ণয়ের পদ্ধতি অন্যতম। গড় পদ্ধতিতে, পূর্ব, পশ্চিম, উত্তর এবং দক্ষিণ দিকের দৈর্ঘ্য গড় করে জমির আয়তন
+                নির্ণয় করা হয়। ত্রিকোণামিতি পদ্ধতিতে, জমির চারটি কোণের দৈর্ঘ্য ব্যবহার করে জমির আয়তন নির্ণয় করা হয়।
+                ত্রিভূজ ক্ষেত্রফল নির্ণয়ের পদ্ধতিতে, তিনটি পাশের দৈর্ঘ্য ব্যবহার করে জমির ক্ষেত্রফল নির্ণয় করা হয়। এই
+                পদ্ধতিগুলি ব্যবহার করে সঠিকভাবে জমির আয়তন এবং ক্ষেত্রফল নির্ণয় করা সম্ভব।
+            </p>
+
+            <!-- average method -->
+            <div>
+                <p class="text-2xl font-bold mt-3 font">গড় পদ্ধতি:</p>
+                <p class="text-justify text-gray-700 font">
+                    গড় পদ্ধতিতে, পূর্ব, পশ্চিম, উত্তর এবং দক্ষিণ দিকের দৈর্ঘ্য গড় করে জমির আয়তন নির্ণয় করা হয়। এই
+                    পদ্ধতিতে, দুই দিকের দৈর্ঘ্য এবং দুই দিকের প্রস্থ যোগ করে গড় নির্ণয় করা হয়েছে। উদাহরণস্বরূপ, যদি
+                    পূর্ব দিকের দৈর্ঘ্য ১০০ ফুট, পশ্চিম দিকের দৈর্ঘ্য ৯০ ফুট, উত্তর দিকের দৈর্ঘ্য ৮০ ফুট এবং দক্ষিণ
+                    দিকের দৈর্ঘ্য ৭০ ফুট হয়, তাহলে গড় পদ্ধতিতে জমির গড় দৈর্ঘ্য হবে (১০০+৯০)/২ = ৯৫ ফুট এবং গড় প্রস্থ হবে
+                    (৮০+৭০)/২ = ৭৫ ফুট। এর ফলে, জমির আয়তন হবে ৯৫ ফুট × ৭৫ ফুট = ৭১২৫ বর্গফুট। এবং জমির পরিমাণ হবে
+                    ৭১২৫/৪৩৫.৬ = ১৬.৩৭ শতাংশ।
+            </div>
+
+
+            <!-- Trigonometric method -->
+            <div class="mb-5">
+                <p class="text-2xl font-bold mt-3 font">ত্রিকোণামিতি পদ্ধতি:</p>
+                <p class="text-justify text-gray-700 font ">
+                    ত্রিকোণামিতি পদ্ধতিতে,
+                    জমিটির মাঝ বরাবর একটি কর্ণ এঁকে জমিকে দুটি ত্রিভূজে বিভক্ত করা হয়েছে। এখন ত্রিভুজ দুটির ক্ষেত্রফল
+                    নির্ণয় করে জমির আয়তন নির্ণয় করা হয়েছে। <br>
+                    এক্ষেত্রে ৩টি বাহুর মান ধরে বিষমবাহু ত্রিভূজের ক্ষেত্রফল নির্ণয়ের সূত্র ব্যবহার করা হয়েছে। </p>
+                <p class="font-bold font text-[20px text-red-500 ]">ধাপসমূহ: <br>
+                </p>
+                <p class="text-justify text-gray-700 font-2 ">
+                    ১. প্রথমে পিথাগোরাসের সূত্র ব্যবহার করে ত্রিভূজ দুটির কর্ণের দৈর্ঘ্য / অতিভূজ নির্ণয় করা হয়েছে।
+                    (অতিভূজ <sup>2</sup> = লম্ব<sup>2</sup> + ভুমি<sup>2</sup>) <br>
+
+                    ২. তারপর প্রতিটি ত্রিভূজের তিনটি বাহুর দৈর্ঘ্য ব্যবহার করে সেমি-পেরিমিটার/ অর্ধপরিসীমা নির্ণয় করা
+                    হয়েছে। (s = (a + b + c) / 2) <br>
+
+                    ৩. এরপর হেরনের সূত্র ব্যবহার করে প্রতিটি ত্রিভূজের ক্ষেত্রফল নির্ণয় করা হয়েছে। (A = √(s(s - a)(s -
+                    b)(s - c))) <br>
+
+                    ৪. অবশেষে, দুই ত্রিভূজের ক্ষেত্রফল যোগ করে জমির মোট আয়তন নির্ণয় করা হয়েছে। <br>
+
+                    ৫. জমির পরিমাণ নির্ণয় করতে, মোট আয়তনকে ৪৩৫.৬ দ্বারা ভাগ করা হয়েছে, যা একটি একর সমান বর্গফুটের
+                    সংখ্যা। <br>
+
+
+                    <br> উদাহরণস্বরূপ, যদি পূর্ব দিকের দৈর্ঘ্য ১০০ ফুট,
+                    পশ্চিম দিকের দৈর্ঘ্য ৯০ ফুট, উত্তর দিকের দৈর্ঘ্য ৮০ ফুট এবং দক্ষিণ দিকের দৈর্ঘ্য ৭০ ফুট হয়, তাহলে
+                    ত্রিকোণামিতি পদ্ধতিতে জমির আয়তন নির্ণয় করা হবে: <br>
+                    ১. প্রথমে, কর্ণের দৈর্ঘ্য নির্ণয় করা হবে: <br>
+                    - ত্রিভূজ ১: অতিভূজ<sup>2</sup> = ১০০<sup>2</sup> + ৮০<sup>2</sup> = ১০,০০০ + ৬,৪০০ = ১৬,৪০০ →
+                    অতিভূজ = √১৬,৪০০ ≈ ১২৮.০৬ ফুট <br> <br>
+                    - ত্রিভূজ ২: অতিভূজ<sup>2</sup> = ৯০<sup>2</sup> + ৭০<sup>2</sup> = ৮,১০০ + ৪,৯০০ = ১৩,০০০ → অতিভূজ
+                    = √১৩,০০০ ≈ ১১৪.০৫ ফুট <br> <br>
+                    ২. তারপর, সেমি-পেরিমিটার নির্ণয় করা হবে: <br>
+                    - ত্রিভূজ ১: s = (১০০ + ৮০ + ১২৮.০৬) / 2 = ১৫৪.০৩ ফুট <br>
+                    - ত্রিভূজ ২: s = (৯০ + ৭০ + ১১৪.০৫) / 2 = ১৪৭.০২ ফুট <br> <br>
+                    ৩. এরপর, হেরনের সূত্র ব্যবহার করে ক্ষেত্রফল নির্ণয় করা হবে: <br>
+                    - ত্রিভূজ ১: A = √(১৫৪.০৩(১৫৪.০৩ - ১০০)(১৫৪.০৩ - ৮০)(১৫৪.০৩ - ১২৮.০৬)) ≈ ৩,৯৫২.৮৭ বর্গফুট <br>
+                    - ত্রিভূজ ২: A = √(১৪৭.০২(১৪৭.০২ - ৯০)(১৪৭.০২ - ৭০)(১৪৭.০২ - ১১৪.০৫)) ≈ ৩,১৫৬.৮৩ বর্গফুট <br> <br>
+                    ৪. অবশেষে, দুই ত্রিভূজের ক্ষেত্রফল যোগ করে জমির মোট আয়তন নির্ণয় করা হবে: <br>
+                    - মোট আয়তন = ৩,৯৫২.৮৭ + ৩,১৫৬.৮৩ = ৭,১০৯.৭০ বর্গফুট <br> <br>
+                    ৫. জমির পরিমাণ নির্ণয় করতে, মোট আয়তনকে ৪৩৫.৬ দ্বারা ভাগ করা হবে: <br>
+                    - জমির পরিমাণ = ৭,১০৯.৭০ / ৪৩৫.৬ ≈ ১৬.৩৭ শতাংশ <br>
+                </p>
+            </div>
+
     </main>
 
 
